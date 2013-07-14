@@ -26,9 +26,12 @@ Usage
 
 `void temple_template_bind_param(resource $template, string $dataTypeString, mixed $parm1[, mixed $parm2[, ...]])` - Bind parameters (PHP variables) for use by the template later on.
 The dataTypeString may contain the following data types:
-`h` - An HTML string, all HTML tags will be left in tact.
-`i`, `l` - An integer number.
-`s` - A string in which the greater than and less than characters are replaced by their HTML encoded equivalent.
+
+  `h` - An HTML string, all HTML tags will be left in tact.
+
+  `i`, `l` - An integer number.
+
+  `s` - A string in which the greater than and less than characters are replaced by their HTML encoded equivalent.
 
 `string temple_template_fetch(resource $template)` - Fetches the resulting string based on the data types, params and format string used to prepare the template in the first place.
 
@@ -38,13 +41,18 @@ The dataTypeString may contain the following data types:
 #### Temple
 
 `Temple::Temple()` - Create a new Temple object.
+
 `Template Temple::prepare(string $str)` - Prepares a template based off of the provided format string and returns the Template object.
+
 `Template Temple::prepare_file(string $filepath)` - Prepares a template based off of the contents of a file and returns the Template object.
 
 #### Template
 `Template::Template(string $formatString)` - Sets up the template using the provided format string.
+
 `resource Template::get()` - Returns the raw resource for use with `temple_template_bind_param`.
+
 `string Template::fetch()` - Fetches the resulting string from the template based on the original format string and bound parameters.
+
 `Template::close()` - Close the template and free its memory.
 
 Interested?
