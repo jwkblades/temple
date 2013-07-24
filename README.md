@@ -15,7 +15,9 @@ Performance
 
 When serving web-pages to end-users speed is always a concern. Temple is built from the ground up with speed as a primary point of interest and as a result we are very pleased to say that it runs only marginally closer than `sprintf` over a large number of iterations.
 
-At only about .8 seconds slower over a 5,000,000 (5-million) iteration benchmark (available for you to se and use on your own machine), which is 10,000,000 calls to both `temple_template_fetch` and `sprintf` the difference in running time is quite minimal (coming out to be only around 0.00000008 seconds per call difference).
+At only about .4 seconds slower over a 5,000,000 (5-million) iteration benchmark (available for you to se and use on your own machine), which is 10,000,000 calls to both `temple_template_fetch` and `sprintf` the difference in running time is quite minimal (coming out to be only around 0.00000004 seconds per call difference).
+
+NOTE - Ubuntu does take longer, approximately 8 seconds per run at only 6 million calls, however the time delta in my benchmarking remained about .4./ Furthermore, the time delta between sprintf and temple\_fetch has changed ever with the upgrade to Fedora 19 (and Ubuntu 12.04) I recently made. No code changes havbe been made in this update.
 
 Usage
 -----
